@@ -2,7 +2,7 @@ const Manager=require('../lib/Manager');
 
 test('creates a manager object',() =>{
 const manager = new Manager('Dave',1,'dave@gmail.com',1);
-    
+expect(typeof manager).toBe('object');
 expect(manager.name).toBe('Dave');
 expect(manager.id).toBe(1);
 expect(manager.email).toBe('dave@gmail.com');
@@ -23,7 +23,12 @@ test("get's manager's email",() =>{
 const manager = new Manager('Dave',1,'dave@gmail.com',1);
 expect(manager.getEmail()).toBe('dave@gmail.com');
 });
-        
+      
+test("get's manager's office number",() =>{
+const manager = new Manager('Dave',1,'dave@gmail.com',1);
+expect(manager.getOfficeNumber()).toBe(1);
+});
+
 test("get's manager's role",() =>{
 const manager = new Manager('Dave',1,'dave@gmail.com',1);
 expect(manager.getRole()).toBe('Manager');

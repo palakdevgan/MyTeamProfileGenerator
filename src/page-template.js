@@ -7,14 +7,14 @@ module.exports = (managerData,engineerData,internData) => {
     for(let i=0;i < engineerData.length;i++){
         let engineerTemplate = ` <div class="card bg-light mb-3" style="max-width: 18rem;">
         <div class="card-header">
-          <h4>${engineerData[i].name}</h4>
-            <h5><span class="material-icons" style="font-size: 24px";>engineering</span>Engineer</h5>
+          <h4>${engineerData[i].getName()}</h4>
+            <h5><span class="material-icons" style="font-size: 24px";>engineering</span>${engineerData[i].getRole()}</h5>
         </div>
         <div class="card-body">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">ID:${engineerData[i].id}</li>
-            <li class="list-group-item">Email:<a href="mailto:${engineerData[i].email}">${engineerData[i].email}</a></li>
-            <li class="list-group-item">GitHub:<a href="https://github.com/${engineerData[i].github}" target="_blank">${engineerData[i].github}</a></li>
+            <li class="list-group-item">ID:${engineerData[i].getId()}</li>
+            <li class="list-group-item">Email:<a href="mailto:${engineerData[i].getEmail()}">${engineerData[i].getEmail()}</a></li>
+            <li class="list-group-item">GitHub:<a href="https://github.com/${engineerData[i].getGithub()}" target="_blank">${engineerData[i].getGithub()}</a></li>
           </ul>
         </div>
       </div>`;
@@ -24,14 +24,14 @@ module.exports = (managerData,engineerData,internData) => {
     for(let i=0;i < internData.length;i++){
       let internTemplate = `<div class="card bg-light mb-3" style="max-width: 18rem;">
       <div class="card-header">
-        <h4>${internData[i].name}</h4>
-          <h5><span class="material-icons">school</span>Intern</h5>
+        <h4>${internData[i].getName()}</h4>
+          <h5><span class="material-icons">school</span>${internData[i].getRole()}</h5>
        </div>
       <div class="card-body">
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">ID:${internData[i].id}</li>
-          <li class="list-group-item">Email:<a href="mailto:${internData[i].email}">${internData[i].email}</a></li>
-          <li class="list-group-item">School:${internData[i].school}</li>
+          <li class="list-group-item">ID:${internData[i].getId()}</li>
+          <li class="list-group-item">Email:<a href="mailto:${internData[i].getEmail()}">${internData[i].getEmail()}</a></li>
+          <li class="list-group-item">School:${internData[i].getSchool()}</li>
         </ul>
       </div>
     </div>`;
@@ -57,14 +57,14 @@ module.exports = (managerData,engineerData,internData) => {
           <div class="mycontainer" >
                 <div class="card bg-light mb-3" style="max-width: 18rem;">
                     <div class="card-header">
-                      <h4>${managerData.name}</h4>
-                        <h5><span class="material-icons">coffee</span>Manager</h5>
+                      <h4>${managerData.getName()}</h4>
+                        <h5><span class="material-icons">coffee</span>${managerData.getRole()}</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:${managerData.id}</li>
-                        <li class="list-group-item">Email:<a href="mailto:${managerData.email}">${managerData.email}</a></li>
-                        <li class="list-group-item">Office number:${managerData.officeNumber}</li>
+                        <li class="list-group-item">ID:${managerData.getId()}</li>
+                        <li class="list-group-item">Email:<a href="mailto:${managerData.getEmail()}">${managerData.getEmail()}</a></li>
+                        <li class="list-group-item">Office number:${managerData.getOfficeNumber()}</li>
                       </ul>
                     </div>
                   </div>

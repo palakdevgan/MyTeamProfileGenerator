@@ -2,7 +2,7 @@ const Engineer=require('../lib/Engineer');
 
 test('creates a engineer object',() =>{
 const engineer = new Engineer('Dave',1,'dave@gmail.com','davem');
-    
+expect(typeof engineer).toBe('object');
 expect(engineer.name).toBe('Dave');
 expect(engineer.id).toBe(1);
 expect(engineer.email).toBe('dave@gmail.com');

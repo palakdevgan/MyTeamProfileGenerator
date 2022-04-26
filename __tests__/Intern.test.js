@@ -2,7 +2,7 @@ const Intern=require('../lib/Intern');
 
 test('creates a intern object',() =>{
 const intern = new Intern('Dave',1,'dave@gmail.com','waterloo');
-    
+expect(typeof intern).toBe('object');
 expect(intern.name).toBe('Dave');
 expect(intern.id).toBe(1);
 expect(intern.email).toBe('dave@gmail.com');
