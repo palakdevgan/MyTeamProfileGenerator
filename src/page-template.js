@@ -1,5 +1,42 @@
 module.exports = (managerData,engineerData,internData) => {
     //console.log(managerData,engineerData,internData);
+
+    let engineerHTML ='';
+    let internHTML='';
+
+    for(let i=0;i < engineerData.length;i++){
+        let engineerTemplate = ` <div class="card bg-light mb-3" style="max-width: 18rem;">
+        <div class="card-header">
+          <h4>${engineerData[i].name}</h4>
+            <h5><span class="material-icons" style="font-size: 24px";>engineering</span>Engineer</h5>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">ID:${engineerData[i].id}</li>
+            <li class="list-group-item">Email:<a href="mailto:${engineerData[i].email}">${engineerData[i].email}</a></li>
+            <li class="list-group-item">GitHub:<a href="https://github.com/${engineerData[i].github}" target="_blank">${engineerData[i].github}</a></li>
+          </ul>
+        </div>
+      </div>`;
+        engineerHTML += engineerTemplate;
+    }
+
+    for(let i=0;i < internData.length;i++){
+      let internTemplate = `<div class="card bg-light mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <h4>${internData[i].name}</h4>
+          <h5><span class="material-icons">school</span>Intern</h5>
+       </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID:${internData[i].id}</li>
+          <li class="list-group-item">Email:<a href="mailto:${internData[i].email}">${internData[i].email}</a></li>
+          <li class="list-group-item">School:${internData[i].school}</li>
+        </ul>
+      </div>
+    </div>`;
+      internHTML += internTemplate;
+  }
     return `
     <!DOCTYPE html>
 <html lang="en">
@@ -20,73 +57,21 @@ module.exports = (managerData,engineerData,internData) => {
           <div class="mycontainer" >
                 <div class="card bg-light mb-3" style="max-width: 18rem;">
                     <div class="card-header">
-                      <h4>${managerData.managerName}</h4>
+                      <h4>${managerData.name}</h4>
                         <h5><span class="material-icons">coffee</span>Manager</h5>
                     </div>
                     <div class="card-body">
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:${managerData.managerEmpID}</li>
-                        <li class="list-group-item">Email:${managerData.managerEmail}</li>
-                        <li class="list-group-item">Office number:${managerData.managerOfficeNumber}</li>
+                        <li class="list-group-item">ID:${managerData.id}</li>
+                        <li class="list-group-item">Email:<a href="mailto:${managerData.email}">${managerData.email}</a></li>
+                        <li class="list-group-item">Office number:${managerData.officeNumber}</li>
                       </ul>
                     </div>
                   </div>
-                  <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                      <h4>Alex</h4>
-                        <h5><span class="material-icons" style="font-size: 24px";>engineering</span>Engineer</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:2</li>
-                        <li class="list-group-item">Email:abc@gmail.com</li>
-                        <li class="list-group-item">GitHub:abc</li>
-                      </ul>
-                    </div>
-                  </div>
-             
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                      <h4>Grace</h4>
-                        <h5><span class="material-icons">coffee</span>Engineer</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:3</li>
-                        <li class="list-group-item">Email:abc@gmail.com</li>
-                        <li class="list-group-item">GitHub:abc</li>
-                      </ul>
-                    </div>
-                  </div>
-               <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                      <h4>Tammer</h4>
-                        <h5><span class="material-icons">school</span>Engineer</h5>
-                     </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:1</li>
-                        <li class="list-group-item">Email:abc@gmail.com</li>
-                        <li class="list-group-item">Office number:1</li>
-                      </ul>
-                    </div>
-                  </div>
-             
-                <div class="card bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header">
-                      <h4>Jared</h4>
-                        <h5><span class="material-icons">coffee</span>Manager</h5>
-                    </div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item">ID:1</li>
-                        <li class="list-group-item">Email:abc@gmail.com</li>
-                        <li class="list-group-item">Office number:1</li>
-                      </ul>
-                    </div>
+                 
+             ${engineerHTML}
+             ${internHTML}
                 
-              </div>
-      
     </div>
 </body>
 </html>
