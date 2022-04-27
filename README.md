@@ -18,7 +18,7 @@ You can clone the project from GitHub by copying either HTTPS or SSH link.Then g
 
 ## Usage
 
-Go to command prompt in the root directory of the project and type node index.js and hit enter. Answer the questions about employees on a software engineering team on command prompt and then an HTML webpage that displays summaries for each person is generated in dist folder for you.
+Go to command prompt in the root directory of the project and type node index.js and hit enter. Answer the questions about employees on a software engineering team on command prompt and then an HTML webpage index.html that displays summaries for each person is generated in dist folder for you.
 
 ## License
 
@@ -30,7 +30,7 @@ Copyright &copy; 2022, Palak Devgan
 To contribute to this project,clone this repo locally and commit your code on separate branch.Then create a pull request for the author before merging it to main branch.
 
 ## Link to Walkthrough Video
-
+https://drive.google.com/file/d/12-0-2GPjBciKcKe37KK_pGArmUI3rILX/view
 
 ## Questions
 
